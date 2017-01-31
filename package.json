@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/anna-marie-vos/express-cookies#readme",
   "dependencies": {
-    "express": "^4.14.1"
+    "express": "^4.14.1",
+    "express-session": "^1.15.0"
   }
 }
