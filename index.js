@@ -24,7 +24,8 @@ app.get('/welcome', function(req, res, next){
 })
 
 app.get('/logout', function(req,res,next){
-  delete req.session.name
+  req.session.destroy(function(err) {
+  })
   res.send('log out')
 })
 
