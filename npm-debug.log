@@ -1,5 +1,5 @@
 0 info it worked if it ends with ok
-1 verbose cli [ '/usr/bin/nodejs', '/usr/bin/npm', 'run', 'start' ]
+1 verbose cli [ '/usr/bin/nodejs', '/usr/bin/npm', 'start' ]
 2 info using npm@3.5.2
 3 info using node@v4.2.6
 4 verbose run-script [ 'prestart', 'start', 'poststart' ]
@@ -25,7 +25,7 @@
 15 verbose pkgid express-cookies@1.0.0
 16 verbose cwd /home/amv/Workspace/express-cookies
 17 error Linux 4.4.0-59-generic
-18 error argv "/usr/bin/nodejs" "/usr/bin/npm" "run" "start"
+18 error argv "/usr/bin/nodejs" "/usr/bin/npm" "start"
 19 error node v4.2.6
 20 error npm  v3.5.2
 21 error code ELIFECYCLE

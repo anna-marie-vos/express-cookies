@@ -1,6 +1,11 @@
-var express = require('express')
-var app = express()
-var session = require('express-session')
+const express = require('express')
+const app = express()
+const session = require('express-session')
+const bodyParser = require('body-parser')
+const path = require('path')
+
+app.use(bodyParser.json())
+app.use(bodyParser.urlencoded({ extended: false }))
 
 app.use(session({
   secret: 'keyboard cat',
@@ -9,13 +14,8 @@ app.use(session({
   cookie: { secure: false }
 }))
 
-app.use(function(req,res,next){
-  next()
-})
-
 app.get('/', function (req, res, next) {
-  req.session.name = 'Garfield'
-  res.send(req.session.name)
+  res.sendFile(path.join(__dirname, 'form.html'))
 })
 
 app.get('/welcome', function(req, res, next){
