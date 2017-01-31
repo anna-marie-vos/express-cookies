@@ -10,12 +10,11 @@ app.use(session({
 }))
 
 app.use(function(req,res,next){
-  req.session.name = 'Garfield'
   next()
 })
 
 app.get('/', function (req, res, next) {
-  // console.log('req.headers', req.headers);
+  req.session.name = 'Garfield'
   res.send(req.session.name)
 })
 
@@ -24,6 +23,10 @@ app.get('/welcome', function(req, res, next){
   res.send(messages)
 })
 
+app.get('/logout', function(req,res,next){
+  delete req.session.name
+  res.send('log out')
+})
 
 
 
